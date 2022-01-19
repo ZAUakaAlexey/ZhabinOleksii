@@ -70,9 +70,7 @@ const productsList = document.querySelector('.products-box'),
                 if (inputName && inputEmail && inputName.trim().length>0 && inputEmail.trim().length>0) {
                      alert(`${inputName}, благодарим за покупку ${totalGoods} товаров на сумму ${overalPrice}грн`);
                      showTopCartInfo('XXX','XXX');
-                    //  modalDiv.innerHTML = '';
                      modalDiv.style.display = 'none';
-
                 } else {
                      alert("поля не заполнены (или заполнены только пробелами)");
                 }
@@ -133,8 +131,6 @@ const productsList = document.querySelector('.products-box'),
         });
     };
 
-// modalDiv.style.display = 'none';
-    
 document.querySelectorAll('.product-box__btn').forEach((item, id) => {
     item.addEventListener('click', () => {
         addItemtoChart(id);        
@@ -151,8 +147,3 @@ getTypeSelect.forEach((item) => {
 checkoutBtn.addEventListener('click', () => {
     openModal();
 });
-
-
-
-// 
-
